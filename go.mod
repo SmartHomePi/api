@@ -1,4 +1,4 @@
-module github.com/SiddheshNan/PiHome
+module github.com/SmartHomePi/api
 
 go 1.16
 
