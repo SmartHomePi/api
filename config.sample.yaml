@@ -1,0 +1,33 @@
+server:
+  env: "dev"
+  timezone: "Asia/Kolkata"
+  http:
+    ip: "0.0.0.0"
+    port: 1337
+    cors: true
+
+logs:
+  enabled: true
+  log_level: "DEBUG"
+  file:
+    enabled: true
+    name: "conbined.log"
+    path: "./logs"
+
+database:
+  name: ""
+  host: ""
+  auth: false
+  username: ""
+  password: ""
+
+redis:
+  enabled: true
+  host: ""
+  port: 6379
+  auth: false
+  password: ""
+
+jwt:
+  ACCESS_SECRET: "abcd123"
+  REFRESH_SECRET: "abcd123"

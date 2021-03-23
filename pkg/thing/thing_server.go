@@ -6,6 +6,8 @@ import (
 	"log"
 	"net"
 	"strings"
+
+	"github.com/SmartHomePi/api/pkg/logger"
 )
 
 func handleConnection(conn net.Conn) {
@@ -24,14 +26,14 @@ func handleConnection(conn net.Conn) {
 }
 
 func StartThingServer() {
-	fmt.Println("Starting Thing Server...")
+	logger.Info("starting thing server")
 
 	ln, err := net.Listen("tcp", "127.0.0.1:8081")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println("Accepting 'thing' TCP connections on port 8081")
+	logger.Info("Accepting 'thing' TCP connections on port 8081")
 
 	for {
 		conn, err := ln.Accept()
